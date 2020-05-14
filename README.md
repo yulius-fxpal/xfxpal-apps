@@ -1,4 +1,4 @@
-#xfxpal.com apps
+# xfxpal.com apps
 
 ## riot - https://github.com/vector-im/riot-web/
 
