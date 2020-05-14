@@ -1,0 +1,3 @@
+[submodule "xfxpal-site"]
+	path = xfxpal-site
+	url = https://github.com/yulius-fxpal/xfxpal-site
