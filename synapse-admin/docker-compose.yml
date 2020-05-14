@@ -1,0 +1,9 @@
+version: "3.4"
+
+services:
+  synapse:
+    container_name: "synapse-admin"
+    image: "awesometechnologies/synapse-admin:latest"
+    restart: "unless-stopped"
+    ports:
+      - "127.0.0.1:9000:80"

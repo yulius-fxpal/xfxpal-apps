@@ -1,0 +1,12 @@
+version: "3.4"
+
+services:
+  synapse:
+    container_name: "synapse"
+    image: "matrixdotorg/synapse:latest-py3"
+    restart: "unless-stopped"
+    ports:
+      - "127.0.0.1:8008:8008"
+        #- "127.0.0.1:8448:8448"
+    volumes:
+      - "/apps/synapse/data/:/data/"

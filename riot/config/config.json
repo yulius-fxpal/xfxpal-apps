@@ -1,0 +1,52 @@
+{
+    "default_server_config": {
+        "m.homeserver": {
+            "base_url": "https://matrix.xfxpal.com",
+            "server_name": "xfxpal.com"
+        },
+        "m.identity_server": {
+            "base_url": "https://vector.im"
+        }
+    },
+    "disable_custom_urls": false,
+    "disable_guests": false,
+    "disable_login_language_selector": false,
+    "disable_3pid_login": false,
+    "brand": "Riot",
+    "integrations_ui_url": "https://dimension.t2bot.io/riot",
+    "integrations_rest_url": "https://dimension.t2bot.io/api/v1/scalar",
+    "integrations_widgets_urls": [
+        "https://dimension.t2bot.io/widgets"
+    ],
+    "integrations_jitsi_widget_url": "https://dimension.t2bot.io/widgets/jitsi",
+    "bug_report_endpoint_url": "https://riot.im/bugreports/submit",
+    "defaultCountryCode": "US",
+    "showLabsSettings": false,
+    "features": {
+        "feature_pinning": "labs",
+        "feature_custom_status": "labs",
+        "feature_custom_tags": "labs",
+        "feature_state_counters": "labs"
+    },
+    "default_federate": true,
+    "default_theme": "light",
+    "roomDirectory": {
+        "servers": [
+            "matrix.xfxpal.com"
+        ]
+    },
+    "welcomeUserId": "@riot-bot:matrix.xfxpal.com",
+    "piwik": {
+        "url": "https://piwik.riot.im/",
+        "whitelistedHSUrls": ["https://matrix.xfxpal.com"],
+        "whitelistedISUrls": ["https://vector.im", "https://matrix.xfxpal.com"],
+        "siteId": 1
+    },
+    "enable_presence_by_hs_url": {
+        "https://matrix.xfxpal.com": false,
+        "https://chat.xfxpal.com": false
+    },
+    "settingDefaults": {
+        "breadcrumbs": true
+    }
+}

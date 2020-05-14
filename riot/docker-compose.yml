@@ -1,0 +1,11 @@
+version: "3.4"
+
+services:
+  riot:
+    container_name: "riot"
+    image: "vectorim/riot-web:latest"
+    restart: "unless-stopped"
+    ports:
+      - "127.0.0.1:8002:80"
+    volumes:
+      - "/apps/riot/config/config.json:/app/config.json"
