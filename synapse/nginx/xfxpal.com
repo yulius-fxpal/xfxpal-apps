@@ -11,6 +11,32 @@ server {
 
 server {
     # Host configuration
+    listen 80;
+    listen [::]:80;
+    server_name www.xfxpal.com;
+
+    location / {
+        return 301 https://xfxpal.com$request_uri;
+    }
+}
+
+server {
+    # Host configuration
+    listen 443 http2 ssl;
+    listen [::]:443 http2 ssl;
+    server_name www.xfxpal.com;
+
+    location / {
+        return 301 https://xfxpal.com$request_uri;
+    }
+
+    ssl_certificate /etc/letsencrypt/live/www.xfxpal.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/www.xfxpal.com/privkey.pem;
+}
+
+
+server {
+    # Host configuration
     listen 443 http2 ssl;
     listen [::]:443 http2 ssl;
     server_name xfxpal.com;
