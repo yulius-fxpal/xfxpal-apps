@@ -50,20 +50,9 @@ server {
 
     root /apps/xfxpal-site/xfxpal-talent/build;
 
-    location /videos {
-        index index.php index.html index.htm;
-        alias /apps/xfxpal-videos;
-
-        location ~ \.php$ {
-            fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
-            include fastcgi_params;                       
-            fastcgi_param SCRIPT_FILENAME $request_filename;
-            #fastcgi_intercept_errors on;
-        }
-    }
-
     location / {
         index index.html;
+        try_files $uri /index.html;
     }
 
     location /_matrix {
